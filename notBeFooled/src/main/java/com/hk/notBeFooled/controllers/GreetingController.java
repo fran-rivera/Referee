@@ -1,7 +1,7 @@
 package com.hk.notBeFooled.controllers;
 
 
-import com.hk.notBeFooled.Greeting;
+import com.hk.notBeFooled.model.Greeting;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

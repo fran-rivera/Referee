@@ -1,4 +1,4 @@
-package com.hk.notBeFooled;
+package com.hk.notBeFooled.model;
 
 public class Greeting {
 
