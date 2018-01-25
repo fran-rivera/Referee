@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 public class NotBeFooledApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(NotBeFooledApplication.class, args);
 	}
 

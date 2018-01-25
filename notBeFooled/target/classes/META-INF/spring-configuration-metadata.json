@@ -1,0 +1,11 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.hk.notBeFooled.model.Category",
+      "name": "category",
+      "type": "com.hk.notBeFooled.model.Category"
+    }
+  ],
+  "properties": []
+}
