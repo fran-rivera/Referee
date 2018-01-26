@@ -15,7 +15,7 @@ public class addMatchController {
     addMatchService addMatchService;
 
 
-    @RequestMapping("/addMatch")
+    @RequestMapping("/notBeFooled/addMatch")
     public CashOut addMatch(Appointment appointment){
         return addMatchService.addMatch(appointment);
     }

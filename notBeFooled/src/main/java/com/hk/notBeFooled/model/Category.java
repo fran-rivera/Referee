@@ -1,13 +1,35 @@
 package com.hk.notBeFooled.model;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 
-@ConfigurationProperties(prefix="category")
+@Component
+@ConfigurationProperties("category")
 public class Category {
 
-    private double Tercera;
+    private String tercera;
 
-    public double getTercera() {
-        return Tercera;
+    private String ligaNacionalJuvenil;
+
+
+    public String getTercera() {
+        return tercera;
     }
+
+    public void setTercera(String tercera) {
+        this.tercera = tercera;
+    }
+
+
+    public String getLigaNacionalJuvenil() {
+        return ligaNacionalJuvenil;
+    }
+
+    public void setLigaNacionalJuvenil(String ligaNacionalJuvenil) {
+        this.ligaNacionalJuvenil = ligaNacionalJuvenil;
+    }
+
+
+
+
 }

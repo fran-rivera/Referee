@@ -7,5 +7,16 @@
       "type": "com.hk.notBeFooled.model.Category"
     }
   ],
-  "properties": []
+  "properties": [
+    {
+      "sourceType": "com.hk.notBeFooled.model.Category",
+      "name": "category.liga-nacional-juvenil",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.hk.notBeFooled.model.Category",
+      "name": "category.tercera",
+      "type": "java.lang.String"
+    }
+  ]
 }
