@@ -4,7 +4,9 @@ import com.hk.notBeFooled.model.Appointment;
 import com.hk.notBeFooled.model.CashOut;
 import com.hk.notBeFooled.services.addMatchService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -15,8 +17,8 @@ public class addMatchController {
     addMatchService addMatchService;
 
 
-    @RequestMapping("/notBeFooled/addMatch")
-    public CashOut addMatch(Appointment appointment){
+    @RequestMapping(method = RequestMethod.POST, value = "/notBeFooled/addMatch")
+    public CashOut addMatch(@RequestBody Appointment appointment){
         return addMatchService.addMatch(appointment);
     }
 
