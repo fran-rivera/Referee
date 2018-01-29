@@ -1,5 +1,7 @@
 package com.hk.notBeFooled.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class Appointment {
@@ -7,6 +9,7 @@ public class Appointment {
     String id;
     String category;
     String site;
+    @JsonFormat(pattern="dd-MM-yyyy")
     Date dateMatch;
 
     public Appointment() {
