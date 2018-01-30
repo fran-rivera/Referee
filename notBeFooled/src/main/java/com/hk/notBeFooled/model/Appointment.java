@@ -2,22 +2,26 @@ package com.hk.notBeFooled.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 public class Appointment {
 
     String id;
-    String category;
+    @NotNull
+    String competition;
+    @NotNull
     String site;
+    @NotNull
     @JsonFormat(pattern="dd-MM-yyyy")
     Date dateMatch;
 
     public Appointment() {
     }
 
-    public Appointment(String id, String category, String site, Date dateMatch) {
+    public Appointment(String id, String competition, String site, Date dateMatch) {
         this.id = id;
-        this.category = category;
+        this.competition = competition;
         this.site = site;
         this.dateMatch = dateMatch;
     }
@@ -30,12 +34,12 @@ public class Appointment {
         this.id = id;
     }
 
-    public String getCategory() {
-        return category;
+    public String getCompetition() {
+        return competition;
     }
 
     public void setCategory(String category) {
-        this.category = category;
+        this.competition = category;
     }
 
     public String getSite() {

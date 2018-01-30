@@ -3,16 +3,16 @@ category:
     Liga-Nacional-Juvenil: 42.02
 
 expenses:
-    mini: 15
+    minium: 15
     medium: 30
-    max: 45
+    maximum: 45
 
 expensesTravel:
   Tercera:
-    Salamanca:
-    Astorga:
-    La-Bañeza:
-    Tordesillas:
+    Salamanca: 100
+    Astorga: 150
+    La-Bañeza: 180
+    Tordesillas: 50
     Palencia:
     Zamora:
     Soria:

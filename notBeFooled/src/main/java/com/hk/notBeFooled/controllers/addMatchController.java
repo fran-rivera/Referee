@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+
 @RestController
 public class addMatchController {
 
@@ -18,7 +20,7 @@ public class addMatchController {
 
 
     @RequestMapping(method = RequestMethod.POST, value = "/notBeFooled/addMatch")
-    public CashOut addMatch(@RequestBody Appointment appointment){
+    public CashOut addMatch(@Valid @RequestBody Appointment appointment){
         return addMatchService.addMatch(appointment);
     }
 

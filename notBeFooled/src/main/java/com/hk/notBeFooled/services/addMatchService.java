@@ -4,7 +4,6 @@ import com.hk.notBeFooled.model.Appointment;
 import com.hk.notBeFooled.model.CashOut;
 import com.hk.notBeFooled.model.Category;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -30,7 +29,7 @@ public class addMatchService {
 
 
         // Recoger derechos en función de la categoría.
-        appointment.getCategory();
+        appointment.getCompetition();
 
         CashOut co = new CashOut();
         co.setFees(Double.valueOf(this.category.getTercera()));
