@@ -7,7 +7,7 @@ expenses:
     medium: 30
     maximum: 45
 
-expensesTravel:
+distance:
   Tercera:
     Salamanca: 100
     Astorga: 150

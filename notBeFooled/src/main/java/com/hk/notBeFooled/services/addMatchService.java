@@ -32,32 +32,56 @@ public class addMatchService {
          * 4. Return CashOut
          */
 
+        Double distance = getDistance(appointment);
+
         CashOut co = new CashOut();
         co.setFees(getAmountFees(appointment));
-        co.setExpense(getAmountExpense(getDistance(appointment)));
-        co.setTravelExpenses(Double.valueOf(environment.getProperty(""+appointment.getSite())));
 
+        if (distance == null) {
+
+            System.out.println("No se puede calcular correctamente la liquidación! Distance is empty!" );
+
+        }else{
+
+            co.setExpense(getAmountExpense(distance));
+            co.setTravelExpenses(getAmountExpenseTravel(distance));
+
+        }
+
+        co.setTotalAmount(co.getFees()+co.getExpense()+co.getTravelExpenses());
 
         return co;
     }
 
     private Double getAmountExpense(Double distance) {
+
+        Double min = 50.0;
+        Double medium = 100.0;
+
+        if (distance <= min){
+            return Double.valueOf(environment.getProperty("expenses.minium"));
+        }else if (distance > min && distance <= medium){
+            return Double.valueOf(environment.getProperty("expenses.medium"));
+        }else {
+            return Double.valueOf(environment.getProperty("expenses.maximum"));
+        }
+
     }
 
+    private Double getAmountExpenseTravel(Double distance) {
+        return distance * 0.19;
+    }
 
     public Double getAmountFees (Appointment appointment){
         return Double.valueOf(environment.getProperty(CATEGORY +appointment.getCompetition()));
     }
-
 
     public Double getDistance (Appointment appointment){
         // En funcion de la distancia obtenemos la dieta.
         return Double.valueOf(environment.getProperty("distance."+appointment.getCompetition()+"."+appointment.getSite()));
     }
 
-    public Double getAmountFees (Appointment appointment){
-        return Double.valueOf(environment.getProperty(CATEGORY +appointment.getCompetition()));
-    }
+
 
 
 }
