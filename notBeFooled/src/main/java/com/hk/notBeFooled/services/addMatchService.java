@@ -78,7 +78,7 @@ public class addMatchService {
 
     public Double getDistance (Appointment appointment){
         // En funcion de la distancia obtenemos la dieta.
-        return Double.valueOf(environment.getProperty("distance."+appointment.getCompetition()+"."+appointment.getSite()));
+        return Double.valueOf(environment.getProperty("localTeam."+appointment.getCompetition()+"."+appointment.getSite()));
     }
 
 

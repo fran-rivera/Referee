@@ -7,8 +7,8 @@ expenses:
     medium: 30
     maximum: 45
 
-distance:
-  Tercera:
+localTeam:
+  tercera:
     Salamanca: 100
     Astorga: 150
     La-Bañeza: 180
