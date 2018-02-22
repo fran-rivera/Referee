@@ -1,17 +1,32 @@
 package com.hk.notBeFooled.model;
 
+import com.sun.javafx.beans.IDProperty;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
+@Entity
 public class Referee {
 
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     String id;
+    @NotNull
     String name;
+    @NotNull
     String lastName1;
     String lastName2;
     Date birthdate;
+    @NotNull
     String email;
+    @NotNull
     String category;
+    @NotNull
     String delegation;
 
 
