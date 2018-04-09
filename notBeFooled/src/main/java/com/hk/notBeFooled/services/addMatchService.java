@@ -4,6 +4,7 @@ import com.hk.notBeFooled.model.Appointment;
 import com.hk.notBeFooled.model.CashOut;
 import com.hk.notBeFooled.model.Category;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +18,9 @@ public class addMatchService {
     @Autowired
     private Environment environment;
 
+    @Value("${spring.datasource.password}")
+    private String password;
+
     public addMatchService(Category category) {
         this.category = category;
     }
@@ -24,6 +28,8 @@ public class addMatchService {
 
     public CashOut addMatch(Appointment appointment) {
 
+
+        System.out.println("pass = " +password);
 
         /**
          * 1. Register appointment in DB.

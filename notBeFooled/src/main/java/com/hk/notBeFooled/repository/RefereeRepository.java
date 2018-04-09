@@ -7,7 +7,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @Transactional
-public interface RefereeRepository  extends CrudRepository <Referee,Long>{
+public interface RefereeRepository  extends CrudRepository <Referee,Integer>{
 
     //List<Referee> findByName (String name);
 
