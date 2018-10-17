@@ -26,12 +26,12 @@ public class addMatchController {
 
     @RequestMapping(method = RequestMethod.POST, value = "/notBeFooled/addMatch")
     public CashOut addMatch(@Valid @RequestBody Appointment appointment){
-        Referee ref = null;;
+        Referee ref;
         try{
             ref = new Referee();
             ref.setName("Tomas");
             ref.setLastName1("Lopez");
-            ref.setLastName2("Martin");
+            ref.setLastName2("Martin2");
             //ref.setBirthdate();
             ref.setCategory("1ª Div.Prov.Aficionados");
             ref.setDelegation("Zamora");
