@@ -13,7 +13,7 @@ public class Referee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id;
+    private Integer id;
     @NotNull
     private String name;
     @NotNull
@@ -28,7 +28,7 @@ public class Referee {
     private String delegation;
 
 
-    public Referee(String id, String name, String lastName1, String lastName2, Date birthdate, String email, String category, String delegation) {
+    public Referee(Integer id, String name, String lastName1, String lastName2, Date birthdate, String email, String category, String delegation) {
         this.id = id;
         this.name = name;
         this.lastName1 = lastName1;
@@ -43,11 +43,11 @@ public class Referee {
 
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
