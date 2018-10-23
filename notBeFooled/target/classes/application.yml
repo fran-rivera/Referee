@@ -34,7 +34,7 @@ localTeam:
 # Connection url for the database "mysql"
 spring:
   datasource:
-    url : jdbc:mysql://127.0.0.1:33061/appoinTonic
+    url : jdbc:mysql://127.0.0.1:33061/AppoinTonicBD
     username: root
     password: appoint
     testWhileIdle: true
